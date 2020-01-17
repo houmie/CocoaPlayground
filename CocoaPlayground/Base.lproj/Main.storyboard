@@ -753,14 +753,25 @@
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
+                                                            <button translatesAutoresizingMaskIntoConstraints="NO" id="63u-Xr-ng3">
+                                                                <rect key="frame" x="20" y="373" width="253" height="48"/>
+                                                                <buttonCell key="cell" type="square" title="Why this weird colour when app starts?" bezelStyle="shadowlessSquare" image="mac_PremiumButton" imagePosition="overlaps" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3TS-pR-V44">
+                                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                    <font key="font" metaFont="system"/>
+                                                                </buttonCell>
+                                                                <color key="contentTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </button>
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstItem="yx2-NL-KSb" firstAttribute="top" secondItem="OCC-oW-WCo" secondAttribute="top" constant="38" id="0DK-u5-hIa"/>
+                                                            <constraint firstAttribute="bottom" secondItem="63u-Xr-ng3" secondAttribute="bottom" constant="373" id="Due-Uj-it7"/>
                                                             <constraint firstAttribute="trailing" secondItem="weA-eg-bdE" secondAttribute="trailing" id="GmG-2t-RS9"/>
+                                                            <constraint firstAttribute="trailing" secondItem="63u-Xr-ng3" secondAttribute="trailing" constant="29" id="JCm-XR-UYp"/>
                                                             <constraint firstItem="jNt-jO-3Pa" firstAttribute="trailing" secondItem="weA-eg-bdE" secondAttribute="trailing" id="Nph-4s-99s"/>
                                                             <constraint firstAttribute="bottom" secondItem="weA-eg-bdE" secondAttribute="bottom" id="PAo-Dk-YqW"/>
                                                             <constraint firstItem="weA-eg-bdE" firstAttribute="top" secondItem="OCC-oW-WCo" secondAttribute="top" id="eAo-dx-BIG"/>
                                                             <constraint firstItem="jNt-jO-3Pa" firstAttribute="top" secondItem="yx2-NL-KSb" secondAttribute="bottom" constant="321" id="jSS-dH-GlZ"/>
+                                                            <constraint firstItem="63u-Xr-ng3" firstAttribute="leading" secondItem="OCC-oW-WCo" secondAttribute="leading" constant="20" id="tYS-xd-fIi"/>
                                                             <constraint firstItem="yx2-NL-KSb" firstAttribute="leading" secondItem="OCC-oW-WCo" secondAttribute="leading" constant="20" id="vlh-sR-htr"/>
                                                             <constraint firstItem="weA-eg-bdE" firstAttribute="leading" secondItem="OCC-oW-WCo" secondAttribute="leading" id="wQh-JK-cpZ"/>
                                                             <constraint firstItem="jNt-jO-3Pa" firstAttribute="leading" secondItem="weA-eg-bdE" secondAttribute="leading" id="yWi-Xa-ebC"/>
@@ -806,4 +817,7 @@
             <point key="canvasLocation" x="875.5" y="1909"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="mac_PremiumButton" width="375" height="48"/>
+    </resources>
 </document>

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -694,51 +695,95 @@
                                     <rect key="frame" x="1" y="1" width="317" height="598"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yx2-NL-KSb">
-                                            <rect key="frame" x="24" y="200" width="270" height="16"/>
-                                            <subviews>
-                                                <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kpB-2Q-Iov">
-                                                    <rect key="frame" x="-2" y="0.0" width="22" height="18"/>
-                                                    <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="xP4-jx-eC9">
-                                                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                                        <font key="font" metaFont="system"/>
-                                                    </buttonCell>
-                                                </button>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="avS-QK-Q2l">
-                                                    <rect key="frame" x="24" y="0.0" width="248" height="16"/>
-                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Click and unclick, Do you see the white?" id="1yx-ij-S7P">
-                                                        <font key="font" metaFont="system"/>
-                                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </textFieldCell>
-                                                </textField>
-                                            </subviews>
-                                            <visibilityPriorities>
-                                                <integer value="1000"/>
-                                                <integer value="1000"/>
-                                            </visibilityPriorities>
-                                            <customSpacing>
-                                                <real value="3.4028234663852886e+38"/>
-                                                <real value="3.4028234663852886e+38"/>
-                                            </customSpacing>
-                                        </stackView>
-                                        <box boxType="custom" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="weA-eg-bdE">
-                                            <rect key="frame" x="0.0" y="0.0" width="317" height="183"/>
-                                            <view key="contentView" id="0Gr-hS-uTX">
-                                                <rect key="frame" x="1" y="1" width="315" height="181"/>
+                                        <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" findBarPosition="aboveHorizontalRuler" translatesAutoresizingMaskIntoConstraints="NO" id="g7N-Du-xHd">
+                                            <rect key="frame" x="0.0" y="0.0" width="317" height="598"/>
+                                            <clipView key="contentView" copiesOnScroll="NO" id="V11-lB-Ah1">
+                                                <rect key="frame" x="0.0" y="0.0" width="317" height="598"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            </view>
-                                            <color key="borderColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <color key="fillColor" red="0.99545454550000001" green="0.99090909090000001" blue="1" alpha="0.93548655790000002" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </box>
+                                                <subviews>
+                                                    <view id="OCC-oW-WCo">
+                                                        <rect key="frame" x="0.0" y="0.0" width="302" height="883"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <subviews>
+                                                            <box boxType="custom" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="weA-eg-bdE">
+                                                                <rect key="frame" x="0.0" y="0.0" width="302" height="883"/>
+                                                                <view key="contentView" id="0Gr-hS-uTX">
+                                                                    <rect key="frame" x="1" y="1" width="300" height="881"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                </view>
+                                                                <color key="borderColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <color key="fillColor" name="systemGrayColor" catalog="System" colorSpace="catalog"/>
+                                                            </box>
+                                                            <stackView distribution="fill" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yx2-NL-KSb">
+                                                                <rect key="frame" x="20" y="829" width="270" height="16"/>
+                                                                <subviews>
+                                                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kpB-2Q-Iov">
+                                                                        <rect key="frame" x="-2" y="0.0" width="22" height="18"/>
+                                                                        <buttonCell key="cell" type="check" bezelStyle="regularSquare" imagePosition="left" inset="2" id="xP4-jx-eC9">
+                                                                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                                            <font key="font" metaFont="system"/>
+                                                                        </buttonCell>
+                                                                    </button>
+                                                                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="avS-QK-Q2l">
+                                                                        <rect key="frame" x="24" y="0.0" width="248" height="16"/>
+                                                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Click and unclick, Do you see the white?" id="1yx-ij-S7P">
+                                                                            <font key="font" metaFont="system"/>
+                                                                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </textFieldCell>
+                                                                    </textField>
+                                                                </subviews>
+                                                                <visibilityPriorities>
+                                                                    <integer value="1000"/>
+                                                                    <integer value="1000"/>
+                                                                </visibilityPriorities>
+                                                                <customSpacing>
+                                                                    <real value="3.4028234663852886e+38"/>
+                                                                    <real value="3.4028234663852886e+38"/>
+                                                                </customSpacing>
+                                                            </stackView>
+                                                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="jNt-jO-3Pa">
+                                                                <rect key="frame" x="0.0" y="94" width="302" height="414"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="414" id="PJe-E1-GLM"/>
+                                                                </constraints>
+                                                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="Why is there this blue placeholder for the scroller? It disturbs the gray background." drawsBackground="YES" id="5b8-Yr-8bz">
+                                                                    <font key="font" metaFont="system"/>
+                                                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                </textFieldCell>
+                                                            </textField>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="yx2-NL-KSb" firstAttribute="top" secondItem="OCC-oW-WCo" secondAttribute="top" constant="38" id="0DK-u5-hIa"/>
+                                                            <constraint firstAttribute="trailing" secondItem="weA-eg-bdE" secondAttribute="trailing" id="GmG-2t-RS9"/>
+                                                            <constraint firstItem="jNt-jO-3Pa" firstAttribute="trailing" secondItem="weA-eg-bdE" secondAttribute="trailing" id="Nph-4s-99s"/>
+                                                            <constraint firstAttribute="bottom" secondItem="weA-eg-bdE" secondAttribute="bottom" id="PAo-Dk-YqW"/>
+                                                            <constraint firstItem="weA-eg-bdE" firstAttribute="top" secondItem="OCC-oW-WCo" secondAttribute="top" id="eAo-dx-BIG"/>
+                                                            <constraint firstItem="jNt-jO-3Pa" firstAttribute="top" secondItem="yx2-NL-KSb" secondAttribute="bottom" constant="321" id="jSS-dH-GlZ"/>
+                                                            <constraint firstItem="yx2-NL-KSb" firstAttribute="leading" secondItem="OCC-oW-WCo" secondAttribute="leading" constant="20" id="vlh-sR-htr"/>
+                                                            <constraint firstItem="weA-eg-bdE" firstAttribute="leading" secondItem="OCC-oW-WCo" secondAttribute="leading" id="wQh-JK-cpZ"/>
+                                                            <constraint firstItem="jNt-jO-3Pa" firstAttribute="leading" secondItem="weA-eg-bdE" secondAttribute="leading" id="yWi-Xa-ebC"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                                            </clipView>
+                                            <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="y3F-PS-MPX">
+                                                <rect key="frame" x="-100" y="-100" width="313" height="16"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.68421052631578949" horizontal="NO" id="EVg-7m-7Nw">
+                                                <rect key="frame" x="301" y="0.0" width="16" height="598"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                            </scroller>
+                                        </scrollView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="trailing" secondItem="weA-eg-bdE" secondAttribute="trailing" id="5O5-uQ-G6w"/>
-                                        <constraint firstAttribute="bottom" secondItem="weA-eg-bdE" secondAttribute="bottom" id="9r1-tc-dge"/>
-                                        <constraint firstItem="weA-eg-bdE" firstAttribute="top" secondItem="yx2-NL-KSb" secondAttribute="bottom" constant="17" id="Vfx-94-s23"/>
-                                        <constraint firstItem="yx2-NL-KSb" firstAttribute="top" secondItem="bqb-FJ-fPP" secondAttribute="top" constant="382" id="aza-Sd-zmT"/>
-                                        <constraint firstItem="yx2-NL-KSb" firstAttribute="centerX" secondItem="bqb-FJ-fPP" secondAttribute="centerX" id="hLf-a7-O2c"/>
-                                        <constraint firstItem="weA-eg-bdE" firstAttribute="leading" secondItem="bqb-FJ-fPP" secondAttribute="leading" id="u4f-wy-jkG"/>
+                                        <constraint firstAttribute="bottom" secondItem="g7N-Du-xHd" secondAttribute="bottom" id="CwI-Ec-8lB"/>
+                                        <constraint firstItem="g7N-Du-xHd" firstAttribute="leading" secondItem="bqb-FJ-fPP" secondAttribute="leading" id="KLL-NX-0Vg"/>
+                                        <constraint firstItem="g7N-Du-xHd" firstAttribute="top" secondItem="bqb-FJ-fPP" secondAttribute="top" id="L1M-2b-4Op"/>
+                                        <constraint firstAttribute="trailing" secondItem="g7N-Du-xHd" secondAttribute="trailing" id="UQF-Lf-gNz"/>
                                     </constraints>
                                 </view>
                                 <color key="fillColor" red="0.99607843139999996" green="0.99215686270000003" blue="1" alpha="0.93548655790000002" colorSpace="custom" customColorSpace="displayP3"/>
@@ -753,6 +798,7 @@
                     </view>
                     <connections>
                         <outlet property="alwaysOnCheckBox" destination="kpB-2Q-Iov" id="Dd5-On-ejl"/>
+                        <outlet property="scrollView" destination="g7N-Du-xHd" id="fNP-or-32O"/>
                     </connections>
                 </viewController>
                 <customObject id="BOv-qm-fTx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

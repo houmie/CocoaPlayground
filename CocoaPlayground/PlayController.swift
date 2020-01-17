@@ -8,9 +8,13 @@
 import Cocoa
 
 class PlayController: NSViewController {
-
+    @IBOutlet weak var scrollView: NSScrollView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        if let documentView = scrollView.documentView {
+            documentView.scroll(NSPoint(x: 0, y: documentView.bounds.size.height))
+        }
         // Do view setup here.
     }
     

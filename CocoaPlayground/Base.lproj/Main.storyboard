@@ -784,7 +784,7 @@
                                                 <rect key="frame" x="-100" y="-100" width="313" height="16"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.68421052631578949" horizontal="NO" id="EVg-7m-7Nw">
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="EVg-7m-7Nw">
                                                 <rect key="frame" x="301" y="0.0" width="16" height="598"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
@@ -808,13 +808,32 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="alwaysOnCheckBox" destination="kpB-2Q-Iov" id="Dd5-On-ejl"/>
                         <outlet property="scrollView" destination="g7N-Du-xHd" id="fNP-or-32O"/>
                     </connections>
                 </viewController>
                 <customObject id="BOv-qm-fTx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="875.5" y="1909"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="1fl-UR-mfZ">
+            <objects>
+                <windowController storyboardIdentifier="mainWindowController" id="8Py-aF-RmG" sceneMemberID="viewController">
+                    <window key="window" identifier="mainWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titleVisibility="hidden" id="WME-dW-1Hu">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="500" height="400"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+                        <value key="minSize" type="size" width="500" height="400"/>
+                        <value key="maxSize" type="size" width="500" height="400"/>
+                        <connections>
+                            <outlet property="delegate" destination="8Py-aF-RmG" id="pwR-A9-TMI"/>
+                        </connections>
+                    </window>
+                </windowController>
+                <customObject id="c0O-CL-Y5q" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49" y="309"/>
         </scene>
     </scenes>
     <resources>
